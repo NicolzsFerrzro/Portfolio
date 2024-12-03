@@ -100,6 +100,15 @@ nav ul li:hover .submenu {
     font-family: "Quicksand", sans-serif;
     font-weight: 100;
     font-size: 1em;
+    text-decoration: none;
+}
+#liens {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 1.3em;
+    color: #004750;
+    text-decoration: none;
+    
 }
 
 h1{
