@@ -11,7 +11,7 @@ section {
     align-items: center;
     margin-left: 30%;
     margin-right: 30%;
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     left:40%;
     font-size: x-large;
     text-align: center;
@@ -60,7 +60,7 @@ span {
     align-items: center;
     margin-left: 30%;
     margin-right: 30%;
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     left:40%;
     text-align: center;
     width:40%;
