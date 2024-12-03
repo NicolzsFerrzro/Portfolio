@@ -1,0 +1,179 @@
+.mr-dafoe-regular {
+    font-family: "Mr Dafoe", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.montserrat-<uniquifier> {
+font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+}
+
+input:focus {
+    outline: none;
+}
+
+*,
+*:before,
+*:after{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+
+body {
+height:100vh;
+background: #859e9b;
+}
+
+#head-text{
+margin-top:50px;
+text-align:center;
+position:relative;
+padding:0px 20px;
+font-family:"Mr Dafoe", cursive;
+font-size: 55px;
+color:rgb(0, 0, 0)
+}
+
+.container{
+box-shadow: 2px 2px 20px #0000009d;
+margin-top: 5em;
+width:40%;
+top:30%;
+left:50%;
+background:#ffffff;
+border-radius:3em;
+min-width:450px;
+position:absolute;
+min-height:100px;
+transform:translate(-50%, -50%);
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 50px;
+}
+
+
+#newtask {
+padding:30px 20px;
+width:200%;
+display: flex; 
+align-items: center; 
+gap: 0px; 
+}
+
+
+
+#newtask input{
+margin-left: 1.2%;
+width: 40%;
+height: 100%;
+padding: 10px;
+border-top-left-radius: 3px;
+border-bottom-left-radius: 3px;
+background: #e7e7e7;
+font-family: "Montserrat", sans-serif;
+color:#000000;
+border: 0px solid;
+
+}
+#newtask input:focus {
+    outline:none;
+    border-color: black;
+}
+#newtask input:hover{
+    color: #000000;
+    background: #ffffff; 
+    box-shadow: 2px 2px 10px #00000073;
+}
+
+#newtask button{
+padding: 10px;
+margin: 0%;
+border-top-right-radius: 2em;
+border-bottom-right-radius: 2em;
+background-color:#b1b1b1;
+color:#ffffff;
+font-weight: 700;
+font-family: "Montserrat", sans-serif;
+font-weight: 300;
+border:0px;
+}
+#newtask button:hover{
+    box-shadow: 2px 2px 10px #00000073;
+    color: #000000;
+    background: #ffffff; 
+    cursor: pointer;
+}
+
+
+.tasks{
+font-family: "Montserrat", sans-serif;
+background: #ffffff;
+/* border-bottom-left-radius: 1em; */
+/* border-bottom-right-radius: 1em; */
+width:100%;
+padding: 0px 20px ;
+
+}
+
+.task{
+    
+    
+
+}
+
+.delete{
+
+}
+
+#check-task{
+    
+   
+}
+
+.task label{
+    font-family: "Mr Dafoe", cursive;
+    font-weight: 100;
+    font-size: 25px;
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    padding-left: 10px;
+}
+    
+    
+.task label p.check {
+    
+    
+    
+}
+
+.tasks.overflow{
+overflow-y: auto;
+max-height: 200px;
+
+}
+
+.tasks::-webkit-scrollbar{
+width:6px;
+
+
+
+}
+.tasks::-webkit-scrollbar-track{
+background: #2c2c2ca2;
+border-radius:25px;
+
+}
+.tasks::-webkit-scrollbar-thumb{
+background: #555555;
+border-radius:25px;
+
+}
+

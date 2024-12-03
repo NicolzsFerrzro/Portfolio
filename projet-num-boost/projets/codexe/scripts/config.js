@@ -1,0 +1,46 @@
+let listePhrases = [
+    "const addition = (a, b) => a + b;",
+  "console.log('Hello, world!');",
+  "const type = typeof 42;",
+  "const delayedMessage = () => setTimeout(() => console.log('Coucou!'), 1000);",
+  "const names = ['Alice', 'Bob', 'Charlie']; const uppercased = names.map(name => name.toUpperCase());",
+  "const evenNumbers = [1, 2, 3, 4, 5].filter(num => num % 2 === 0);",
+  "const sum = [1, 2, 3].reduce((acc, num) => acc + num, 0);",
+  "const greeting = `Bonjour, ${name}!`;",
+  "fetch('https://api.example.com/data').then(response => response.json()).then(data => console.log(data));",
+  "const promise = new Promise((resolve, reject) => resolve('Résolu!'));",
+  "const fetchData = async () => { const data = await fetch('url'); };",
+  "try { JSON.parse('{invalid:json}'); } catch (error) { console.error('Erreur:', error); }",
+  "for (const num of [1, 2, 3]) { console.log(num); }",
+  "const {name, age} = {name: 'Alice', age: 25};",
+  "const array = [1, 2, 3]; const newArray = [...array, 4];",
+  "const keys = Object.keys({name: 'Alice', age: 25});",
+  "const randomNum = Math.random();",
+  "const jsonString = JSON.stringify({name: 'Alice'});",
+  "import { addition } from './math';",
+  "export const multiply = (a, b) => a * b;"
+  ];
+  
+let listeMots = [
+    "let / const / var",
+  "console.log()",
+  "typeof",
+  "Fonction fléchée (=>)",
+  "setTimeout() / setInterval()",
+  "Array.prototype.map()",
+  "Array.prototype.filter()",
+  "Array.prototype.reduce()",
+  "Template literals (`${}`)",
+  "fetch()",
+  "Promise",
+  "async / await",
+  "try / catch",
+  "for...of / for...in",
+  "Destructuration",
+  "Rest / Spread (...)",
+  "Object.keys() / Object.values()",
+  "Math.random()",
+  "JSON.stringify() / JSON.parse()",
+  "Modules (import / export)"
+  ];
+let score = 0

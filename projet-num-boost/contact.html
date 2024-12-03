@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <title>Contact - Form</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            emailjs.init("9z9SlS2vSDaezP6Pe");
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Projets</a>
+                        <ul class="submenu">
+                            <li><a href="#">JS</a></li>
+                            <li><a href="#">Python</a></li>
+                            <li><a href="#">Logo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div><a target="_blank" href="https://www.linkedin.com/in/nicolas-ferraro-77ab282b5" class="Moi">Nicolas Ferraro</a>
+            </div>
+        </header>
+    <main>
+        <div class="container">
+            <div class="texte">
+            </div>
+            <div class="aside">
+                <h1>Contact - Formulaire</h1>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Votre nom" required>
+                        <input type="email" id="email" placeholder="Votre Email" required>
+                        <textarea id="message" rows="5" placeholder="Votre Message" required></textarea>
+                        <button type="submit" id="envoyer">Envoyer</button>
+                    </form>
+                    <div class="success-message">Votre message a été envoyé</div>
+                    <div class="error-message">Une erreur s'est produite durant l'envoie.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // Empêche le rechargement de la page
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        function isValidEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        if (!name || !email || !message) {
+            document.querySelector(".error-message").textContent =
+                "Veuillez remplir tous les champs.";
+            document.querySelector(".error-message").style.display = "block";
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            document.querySelector(".error-message").textContent =
+                "Veuillez entrer une adresse email valide.";
+            document.querySelector(".error-message").style.display = "block";
+            return;
+        }
+
+        // Appel à EmailJS
+        emailjs
+        .send("service_l3ln7t6", "template12", {
+            from_name: name,
+            from_email: email,
+            message: message,
+        })
+        .then(
+            function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                document.querySelector(".success-message").style.display = "block";
+                document.querySelector(".error-message").style.display = "none";
+                document.getElementById("contactForm").reset(); // Réinitialise le formulaire
+            },
+            function (error) {
+                console.error("FAILED...", error);
+                document.querySelector(".error-message").textContent =
+                    "Une erreur s'est produite. Veuillez vérifier votre configuration.";
+                document.querySelector(".error-message").style.display = "block";
+                document.querySelector(".success-message").style.display = "none";
+            }
+        );
+        });
+
+        </script>
+    <footer class="footer">
+        <div class="logo">
+            <a target="_blank" href="https://www.linkedin.com/in/nicolas-ferraro-77ab282b5" class="lien-icone">
+                <img src="image/linkedin.png" width="30" alt="Logo linkedin" ></a>
+            <a target="_blank" href="https://www.instagram.com/nicolzs.ferrzro/" class="lien-icone">
+                <img src="image/instagram.png" width="30" alt="Logo Instagram" ></a>
+            </div>
+    </footer> 
+</body>
+</html>
+

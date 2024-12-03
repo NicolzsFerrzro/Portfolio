@@ -1,0 +1,107 @@
+/* font-family: "Montserrat", sans-serif;
+font-family: "Mr Dafoe", cursive;
+font-family: "Quicksand", sans-serif;
+ */
+ input:focus {
+    outline: none;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: antiquewhite;
+    left:40%;
+    font-size: x-large;
+    text-align: center;
+    width:40%;
+    border-top-right-radius:  10px ;
+    border-top-left-radius:  10px ;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+*{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+h1{
+    font-family: "Mr Dafoe", cursive;
+    font-weight: 200;
+    font-size: 3em;
+    margin: 0%;
+}
+p, label {
+    font-size: 20px;
+    }
+
+span {
+    font-size: 40px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.zoneScore{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.zoneChoix, 
+.zoneProposition,
+#zoneReponse,
+.zoneScore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: antiquewhite;
+    left:40%;
+    text-align: center;
+    width:40%;
+    border-top-right-radius:  3px ;
+    border-top-left-radius:  3px ;
+
+}
+.zoneChoix{
+    display: block;
+    text-align: justify;
+    text-align: center;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-color: brown; 
+    height: auto;
+    padding-bottom: 20px;
+}
+
+
+#zoneReponse input { 
+    padding: 10px;
+    border: none;
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+}
+
+#valider {
+    padding: 10px;
+    border: none;    
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+    background-color: rgb(63, 97, 83);
+
+}
+#valider:hover {
+    background-color: rgba(63, 97, 83, 0.795);
+}
+#zoneReponse input, #valider {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
