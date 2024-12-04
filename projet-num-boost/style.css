@@ -99,7 +99,7 @@ nav ul li:hover .submenu {
 *{
     font-family: "Quicksand", sans-serif;
     font-weight: 100;
-    font-size: 1em;
+    font-size: 0.98em;
     text-decoration: none;
 }
 #liens {
@@ -128,6 +128,22 @@ body {
 
 }
 
+.container1 {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 0em; /* Espacement entre les colonnes */
+    margin: 7% 12%;
+    background-image: url('image/photo1.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top -100px left 150px ;
+    background-size: 100%;
+    max-width: 1200px;
+    min-height: 375px;
+    
+}
+
 .container {
     display: grid;
     align-items: center; 
@@ -139,6 +155,7 @@ body {
     min-height: 375px;
     
 }
+
 a:hover{
     box-shadow: none;
     
