@@ -138,19 +138,49 @@ body {
     align-items: center; 
     grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
     gap: 0em; /* Espacement entre les colonnes */
-    margin: 7% 12%;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 7%;
+    margin-bottom: 0%;
     background-image: url('image/photo1.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top -100px left 150px ;
-    background-size: 100%;
+    background-size:50%;
+    background-position: top 50% left 100%;
     max-width: 1200px;
-    min-height: 375px;
+    
+    
+}
+.texte {
+    padding-right: 1em;
+    padding-left: 1em;
+    text-align: justify;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
     
 }
 
-/* <div class="containerIndex2"></div>
-<div class="texte2"></div> */
+.containerIndex2{
+     display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr;
+    gap: 0em;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 0%;
+    margin-bottom: 7%;
+    background-image: url('image/sentinel.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 1200px;
+    min-height: 375px; 
+} 
+.texte2{
+    padding-right: 1em;
+    padding-left: 1em;
+    text-align: justify;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}
 
 .containerContact {
     display: grid;
@@ -194,13 +224,7 @@ a:hover{
     
 }
 
-.texte {
-    padding-right: 1em;
-    padding-left: 1em;
-    text-align: justify;
-    background: rgb(0, 0, 0);
-    color: #ffffff;
-}
+
 
 
 
