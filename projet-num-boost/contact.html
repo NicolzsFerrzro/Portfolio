@@ -32,15 +32,18 @@
             </div>
         </header>
     <main>
-        <div class="container">
+        <div class="containerContact">
             <div class="texte">
             </div>
             <div class="aside">
-                <h1>Contact - Formulaire</h1>
+                <h1 class="form">Formulaire de contact</h1>
                     <form id="contactForm">
-                        <input type="text" id="name" placeholder="Votre nom" required>
-                        <input type="email" id="email" placeholder="Votre Email" required>
-                        <textarea id="message" rows="5" placeholder="Votre Message" required></textarea>
+                        <p>Votre nom : </p>
+                        <input type="text" id="name" placeholder="Pierre Dupont" required>
+                        <p>Votre adresse email : </p>
+                        <input type="email" id="email" placeholder="pierre.dupont@mailto.com" required>
+                        <p>Votre message : </p>
+                        <textarea id="message" rows="5" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id libero nec nunc vehicula auctor.Donec fermentum nisi et sapien faucibus, non gravida nisi lacinia. Curabitur tristique lectus eget risus facilisis varius.Aenean vitae augue sit amet nulla facilisis volutpat." required></textarea>
                         <button type="submit" id="envoyer">Envoyer</button>
                     </form>
                     <div class="success-message">Votre message a été envoyé</div>

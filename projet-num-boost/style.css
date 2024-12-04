@@ -2,9 +2,13 @@
 font-family: "Mr Dafoe", cursive;
 font-family: "Quicksand", sans-serif;
  */
- input:focus {
+input:focus {
     outline: none;
 }
+#message:focus{
+    outline: none; 
+}
+
 .Moi{
     margin-left: 0;
     padding-left: 0;
@@ -115,6 +119,7 @@ h1{
     font-family: "Mr Dafoe", cursive;
     font-weight: 100;
     font-size: 2em;
+    padding-left: 5px;
 }
 
 
@@ -128,7 +133,7 @@ body {
 
 }
 
-.container1 {
+.containerIndex {
     display: grid;
     align-items: center; 
     grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
@@ -138,6 +143,25 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top -100px left 150px ;
+    background-size: 100%;
+    max-width: 1200px;
+    min-height: 375px;
+    
+}
+
+/* <div class="containerIndex2"></div>
+<div class="texte2"></div> */
+
+.containerContact {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 0em; /* Espacement entre les colonnes */
+    margin: 7% 12%;
+    background-image: url('image/Contact.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top -120px right 50px ;
     background-size: 100%;
     max-width: 1200px;
     min-height: 375px;
@@ -162,8 +186,10 @@ a:hover{
 }
 
 .aside{
+    min-height:375px;
     margin: 0%;
-    padding: 0%;
+    padding: auto;
+    background-color: #ffffff;
     
     
 }
@@ -179,49 +205,54 @@ a:hover{
 
 
 /* //////////////style pour page contact///////////////////////// */
+
+.form{
+    text-align: center;
+}
+
 #contactForm {
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: 500px;
-    margin: 5px auto;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.555);
+    margin-left: 15px;
 }
 #name{
-    width: 50%;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    width:18%;
+    border: none;
+    
 }
 #email{
-    width: 50%;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    width: 35%;
+    border: none;
+    
 }
 #message {
-    width: 99%;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
+    width: 90%;
+    height: 90px;
+    border:none;
     border-radius: 3px;
 }
 
 #envoyer {
-    color: rgb(255, 255, 255);
+    font-family: "Mr Dafoe", cursive;
+    font-weight: 100;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
     border:none;
-    background-color: #333333;
     padding: 10px 15px;
     border-radius: 3px;
     cursor: pointer;
+    left: 50;
+    right: 50;
+    background-color: #ffffff;
 }
 
 #envoyer:hover {
-    background-color: #333333e0;
+    text-shadow: #111111;
+    
 }
-#envoyer:active {
-    background-color: #333333e0;
-}
+
 .success-message {
     display: none;
     color:rgb(54, 102, 83)
