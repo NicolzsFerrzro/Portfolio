@@ -144,19 +144,21 @@ a:hover{
     
 }
 
-.aside, .texte {
+.aside{
+    margin: 0%;
+    padding: 0%;
     
-    padding: 1em;
-    text-align: justify;
+    
 }
+
 .texte {
+    padding-right: 1em;
+    padding-left: 1em;
+    text-align: justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
 }
 
-.aside {
-    
-}
 
 
 /* //////////////style pour page contact///////////////////////// */
