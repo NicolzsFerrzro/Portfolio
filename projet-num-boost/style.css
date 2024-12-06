@@ -133,6 +133,15 @@ body {
 
 }
 
+#photodenico {
+    position:absolute;
+    top: 20px;
+    left: 105px;
+    width: 200px; /* Largeur de l'image */
+    height: 200px; /* Hauteur de l'image */
+    border-radius: 50%; /* Cercle parfait */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
+  }
 .containerIndex {
     display: grid;
     align-items: center; 
@@ -141,8 +150,9 @@ body {
     margin-bottom: 0%;
 }
 .boxIMG{
+    margin-top: 10px;
     min-height:375px;
-    background-image: url('image/sentinel.jpeg');
+    background-image: url('image/guyane.jpg');
     background-repeat: no-repeat;
     background-size:100%;
     
@@ -167,9 +177,11 @@ body {
     min-height: 375px; 
 }
 .asideIndex2{
-    min-height:375px;
+    margin-top: 10px;
+    min-height:275px;
     background-image:url('image/photo1.jpg');
     background-repeat: no-repeat;
+    background-position-y:center;
     background-size:100%;
      
 }
