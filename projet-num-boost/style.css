@@ -269,13 +269,13 @@ body {
     grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
     gap: 0em; /* Espacement entre les colonnes */
     margin: 7% 12%;
-    background: #ffffff;
+    background: #000000;
     max-width: 1200px;
     min-height: 375px;
     
 }
 .textePy {
-     min-height:375px;
+     /* min-height:375px; */
     padding-right: 1em;
     padding-left: 1em;
     text-align: justify;
