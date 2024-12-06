@@ -249,7 +249,32 @@ body {
 
 }
 
-.container {
+.containerProjetJS {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 0em; /* Espacement entre les colonnes */
+    margin: 7% 12%;
+    max-width: 1200px;
+    min-height: 375px;
+    
+}
+.asideProjetJS{
+    min-height: 400px;
+    background-image: url('image/islande.jpg');
+    background-repeat: no-repeat;
+    background-size:110%;
+
+}
+.texteProjetJS {
+    padding-right: 1em;
+    padding-left: 1em;
+    text-align: justify;
+    background: rgb(0, 0, 0);
+    color: #ffffff;  
+}
+
+.containerProjetPy {
     display: grid;
     align-items: center; 
     grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
@@ -259,6 +284,20 @@ body {
     max-width: 1200px;
     min-height: 375px;
     
+}
+.textePy {
+     min-height:375px;
+    padding-right: 1em;
+    padding-left: 1em;
+    text-align: justify;
+    background: rgb(0, 0, 0);
+    color: #ffffff;  
+}
+.asidePy{
+    /* min-height:375px; */
+    margin: 0%;
+    padding: auto;
+    background-color: #ffffff;  
 }
 
 a:hover{
