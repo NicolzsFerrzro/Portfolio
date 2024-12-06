@@ -283,10 +283,10 @@ body {
     color: #ffffff;  
 }
 .asidePy{
-    /* min-height:375px; */
+    min-height:375px;
     margin: 0%;
     padding: auto;
-    background-color: #ffffff;  
+    background-color: #000000;  
 }
 
 a:hover{

@@ -139,6 +139,8 @@ if 21 > valeur_main > valeur_main_bot:
     print(f"{valeur_main} contre {valeur_main_bot} Vous battez la banque !")
 elif 21 > valeur_main_bot > valeur_main :
     print(f"{valeur_main_bot} contre {valeur_main}. La banque gagne !")
+elif valeur_main_bot == valeur_main :
+    print(f"Chacun récupère sa mise !")
     
 
 
