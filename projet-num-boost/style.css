@@ -136,27 +136,21 @@ body {
 .containerIndex {
     display: grid;
     align-items: center; 
-    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
-    gap: 0em; /* Espacement entre les colonnes */
-    margin-left: 12%;
-    margin-right: 12%;
-    margin-top: 7%;
+    grid-template-columns: 1fr 2fr 1fr; 
+    margin:4% 12%;
     margin-bottom: 0%;
-    
-    max-width: 1200px;
-    
-    
 }
-.asideIndex{
+.boxIMG{
     min-height:375px;
-    background-image: url('image/photo1.jpg');
+    background-image: url('image/sentinel.jpeg');
     background-repeat: no-repeat;
     background-size:100%;
+    
 }
 .texteIndex {
-    min-height:375px;
-    padding-right: 1em;
-    padding-left: 1em;
+    /* min-height:375px; */
+    /* padding-right: 1em;
+    padding-left: 1em; */
     text-align: justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
@@ -166,25 +160,20 @@ body {
 .containerIndex2{
      display: grid;
     align-items: center; 
-    grid-template-columns: 1fr 1fr;
-    gap: 0em;
-    margin-left: 12%;
-    margin-right: 12%;
-    margin-top: 0%;
+    grid-template-columns: 1fr 2fr 1fr; 
+    margin:0% 12%;
     margin-bottom: 7%;
     max-width: 1200px;
     min-height: 375px; 
 }
 .asideIndex2{
-    min-height:398px;
-    background-image: url('image/sentinel.jpeg');
+    min-height:375px;
+    background-image:url('image/photo1.jpg');
     background-repeat: no-repeat;
-    background-size:105%;
+    background-size:100%;
      
 }
 .texteIndex2{
-    padding-right: 1em;
-    padding-left: 1em;
     text-align: justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
