@@ -1,7 +1,7 @@
 import time
 import random
 
-livreur_list = ["bob", "charl", "jam", "pil"]
+livreur_list = ["bob", "charl", "jam", "pil"] 
 pizza_disponible = ["margharita", "calzone", "tri fromaggi", "vegetarienne"]
 livreur_dist = ["15","10", "2", "9"]
 
@@ -52,16 +52,22 @@ if client_input in pizza_disponible:
     # import time reproduire l'exercice des oeufs
    
     while  t_sec != 0 :
-        t_sec -= 10   
-        for i in range(0,10):
-            time.sleep(1)
-            print(".", end="", flush=True)
-        print("")
-        print(f"{t_sec} secondes restantes avant la livraison")
-        
-        if t_sec <= 0 :   
-            print("You've been delivered, enjoy !")
-            break
+        if t_sec >= 10 :
+            t_sec -= 10  
+            for i in range(0,10):
+                time.sleep(1)
+                print(".", end="", flush=True)
+            print("")
+            print(f"{t_sec} secondes restantes avant la livraison")
+        elif t_sec < 10 :
+             t_sec -= 1
+             for i in range(0,t_sec):
+                time.sleep(1)
+                print(".", end="", flush=True)  
+        if t_sec <= 0 :  
+                print("") 
+                print("You've been delivered, enjoy !")
+                break
     
             
 
