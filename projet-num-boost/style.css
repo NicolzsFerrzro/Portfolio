@@ -154,7 +154,7 @@ body {
 }
 .boxIMG{
     margin-top: 10px;
-    min-height:250px;
+    min-height:375px;
     border-radius: 5px;
     background-image: url('image/guyane.jpg');
     background-repeat: no-repeat;
@@ -182,7 +182,7 @@ body {
 }
 .asideIndex2{
     margin-top: 10px;
-    min-height:200px;
+    min-height:275px;
     border-radius: 5px;
     background-image:url('image/photo1.jpg');
     background-repeat: no-repeat;
