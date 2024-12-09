@@ -130,18 +130,21 @@ body {
     margin: 0; /* Supprime les marges par défaut */
     background: #000000;
     min-height: 100%; /* Permet au body de prendre 100% de la hauteur de la fenêtre */
-
 }
 
 #photodenico {
-    position:absolute;
+    position: absolute;
+    left:80%;
     top: 20px;
-    left: 105px;
-    width: 200px; /* Largeur de l'image */
-    height: 200px; /* Hauteur de l'image */
+    width: 120px; /* Largeur de l'image */
+    height: 120px; /* Hauteur de l'image */
     border-radius: 50%; /* Cercle parfait */
     object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
   }
+#photodenico:hover {
+    opacity: 80%;
+
+}
 .containerIndex {
     display: grid;
     align-items: center; 
