@@ -154,7 +154,8 @@ body {
 }
 .boxIMG{
     margin-top: 10px;
-    min-height:375px;
+    min-height:250px;
+    border-radius: 5px;
     background-image: url('image/guyane.jpg');
     background-repeat: no-repeat;
     background-size:100%;
@@ -181,7 +182,8 @@ body {
 }
 .asideIndex2{
     margin-top: 10px;
-    min-height:275px;
+    min-height:200px;
+    border-radius: 5px;
     background-image:url('image/photo1.jpg');
     background-repeat: no-repeat;
     background-position-y:center;
@@ -207,6 +209,8 @@ body {
 }
 .asideForm{
     height:375px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     margin: 0%;
     padding: auto;
     background-color: #ffffff;   
@@ -214,6 +218,8 @@ body {
 
 .texteForm{
     min-height:375px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     background-image: url('image/Contact.jpg');
     background-repeat: no-repeat;
     background-size: 120%;
@@ -246,6 +252,8 @@ body {
     
 }
 .asideProjet{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     min-height: 375px;
     background-image: url('image/projet.jpg');
     background-repeat: no-repeat;
@@ -265,6 +273,8 @@ body {
 }
 .asideProjetJS{
     min-height: 400px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     background-image: url('image/islande.jpg');
     background-repeat: no-repeat;
     background-size:110%;
