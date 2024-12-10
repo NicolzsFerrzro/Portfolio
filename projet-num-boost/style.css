@@ -70,8 +70,9 @@ nav ul li a {
 }
 
 nav ul li:hover > a {
-    background-color:  #000000;
-    border-radius: 5px ;
+    background-color:  #202020;
+    border-top-left-radius: 5px ;
+    border-top-right-radius: 5px;
 }
 
 .submenu {
@@ -96,7 +97,8 @@ nav ul li:hover .submenu {
 }
 
 .submenu li a:hover {
-    text-decoration:underline;
+    background-color: #000000;
+    margin-left: 2%;
 }
 
 
