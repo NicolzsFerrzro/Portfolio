@@ -110,6 +110,22 @@ console.log(zoneReponse);
 // Entrer la réponse
 let zoneTexte = document.querySelector("#zoneReponse input")
 console.log(zoneTexte);
+
+// Empêcher le copier-coller
+zoneTexte.addEventListener("copy", (e) => e.preventDefault());
+zoneTexte.addEventListener("cut", (e) => e.preventDefault());
+zoneTexte.addEventListener("paste", (e) => e.preventDefault());
+
+// Empêcher le clic droit
+zoneTexte.addEventListener("contextmenu", (e) => e.preventDefault());
+
+// Empêcher les raccourcis clavier (Ctrl+C, Ctrl+V, etc.)
+zoneTexte.addEventListener("keydown", (e) => {
+if (e.ctrlKey && (e.key === "c" || e.key === "v" || e.key === "x")) {
+    e.preventDefault();
+}
+});
+
 // Faire apparaitre toutes les touches tapées dans la console
 // document.addEventListener('keydown', (event) => {
 //     console.log(event.key);
