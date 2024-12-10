@@ -70,6 +70,8 @@ function lancerJeu(){
     
     afficherProposition(choixListe[i])
     
+    // zoneTexte.addEventListener("keydown", (e) => {if (e.key === "Enter") {
+    
     boutonValider.addEventListener("click", () => {
         console.log(zoneTexte.value)
         
@@ -90,6 +92,11 @@ function lancerJeu(){
     
     
 }
+
+
+
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -126,6 +133,12 @@ if (e.ctrlKey && (e.key === "c" || e.key === "v" || e.key === "x")) {
 }
 });
 
+// Valider réponse avec la touche entrée
+zoneTexte.addEventListener("keydown", (e) => {
+    if (e.key === "enter") {
+        console.log(zoneTexte.value);
+    }
+});
 // Faire apparaitre toutes les touches tapées dans la console
 // document.addEventListener('keydown', (event) => {
 //     console.log(event.key);
