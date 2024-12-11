@@ -8,6 +8,10 @@ input:focus {
 #message:focus{
     outline: none; 
 }
+.lien-icone:hover{
+    position: relative;
+    bottom:2px;
+}
 
 .Moi{
     margin-left: 0;
@@ -19,6 +23,12 @@ input:focus {
     padding-bottom: 0;
     padding-left: 15px;
     color: #ffffff;
+
+}
+.Moi:hover{
+    position: relative;
+    top:2px;
+    text-shadow: 5px 5px 10px #000000;
 
 }
 
@@ -70,7 +80,8 @@ nav ul li a {
 }
 
 nav ul li:hover > a {
-    background-color:  #202020;
+    position: relative;
+    top: 2px ;
     border-top-left-radius: 5px ;
     border-top-right-radius: 5px;
 }
@@ -78,9 +89,13 @@ nav ul li:hover > a {
 .submenu {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #000000;
+    left:10px;
+    top: 42px ;
+    background-color: #0c0c0c;
+    width: 153px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
 }
 
 .submenu li {
@@ -89,6 +104,7 @@ nav ul li:hover > a {
 
 nav ul li:hover .submenu {
     display: block;
+    display:flex;
 }
 
 .submenu li a {
@@ -97,8 +113,8 @@ nav ul li:hover .submenu {
 }
 
 .submenu li a:hover {
-    background-color: #000000;
-    margin-left: 2%;
+    position: relative;
+    left: 5%;
 }
 
 
@@ -136,17 +152,15 @@ body {
 
 #photodenico {
     position: absolute;
+    border: solid #ffffff2d;
     left:80%;
     top: 20px;
     width: 120px; /* Largeur de l'image */
     height: 120px; /* Hauteur de l'image */
     border-radius: 50%; /* Cercle parfait */
     object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
-  }
-#photodenico:hover {
-    opacity: 80%;
-
 }
+
 .containerIndex {
     display: grid;
     align-items: center; 
