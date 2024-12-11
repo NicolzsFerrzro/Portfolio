@@ -10,7 +10,7 @@ input:focus {
 }
 .lien-icone:hover{
     position: relative;
-    bottom:2px;
+    top:2px;
 }
 
 .Moi{
@@ -90,8 +90,7 @@ nav ul li:hover > a {
     display: none;
     position: absolute;
     left:10px;
-    top: 42px ;
-    background-color: #0c0c0c;
+    top: 30px ;
     width: 153px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -109,7 +108,8 @@ nav ul li:hover .submenu {
 
 .submenu li a {
     padding: 10px;
-    color: white;
+    color: #004750;
+    font-weight:500;
 }
 
 .submenu li a:hover {
