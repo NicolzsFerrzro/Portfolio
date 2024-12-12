@@ -2,6 +2,14 @@
 font-family: "Mr Dafoe", cursive;
 font-family: "Quicksand", sans-serif;
  */
+
+ @media (max-width: 768px) {
+    .containerIndex, .containerIndex2, .containerContact, .containerProjet {
+        grid-template-columns: 1fr; /* Une seule colonne sur petit écran */
+    }
+}
+
+
 input:focus {
     outline: none;
 }
@@ -14,11 +22,9 @@ input:focus {
 }
 
 .Moi{
-    margin-left: 0;
-    padding-left: 0;
     text-decoration: none;
     font-family: "Mr Dafoe", cursive;
-    font-size: 30px;
+    font-size: 180%;
     margin-bottom: 0;
     padding-bottom: 0;
     padding-left: 15px;
@@ -48,7 +54,7 @@ input:focus {
     display:flex;
     justify-content:center;
     align-items: center;
-    padding-top: 5px;
+    padding-top: 1%;
     background-color: #111111;
     border:none;
     border-top: 2px solid #333; /* Définir l'épaisseur, le style et la couleur du rebord */
@@ -90,7 +96,7 @@ nav ul li:hover > a {
     display: none;
     position: absolute;
     left:10px;
-    top: 30px ;
+    top: 35px ;
     width: 153px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -147,7 +153,7 @@ body {
     min-height: 100vh; /* Force le body à occuper toute la hauteur de la page */
     margin: 0; /* Supprime les marges par défaut */
     background: #000000;
-    min-height: 100%; /* Permet au body de prendre 100% de la hauteur de la fenêtre */
+   
 }
 
 #photodenico {
@@ -161,52 +167,56 @@ body {
     object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
 }
 
+
 .containerIndex {
-    display: grid;
-    align-items: center; 
-    grid-template-columns: 1fr 2fr 1fr; 
-    margin:4% 12%;
-    margin-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    width: 500px;
+    margin: 0% auto; 
+    margin-bottom: 2%;
 }
-.boxIMG{
-    margin-top: 10px;
-    min-height:375px;
-    border-radius: 5px;
-    background-image: url('image/guyane.jpg');
-    background-repeat: no-repeat;
-    background-size:100%;
-    
-}
+
 .texteIndex {
-    /* min-height:375px; */
-    /* padding-right: 1em;
-    padding-left: 1em; */
+    margin : 2%;
     text-align: justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
     
 }
 
-.containerIndex2{
-     display: grid;
-    align-items: center; 
-    grid-template-columns: 1fr 2fr 1fr; 
-    margin:0% 12%;
-    margin-bottom: 7%;
-    max-width: 1200px;
-    min-height: 375px; 
-}
-.asideIndex2{
-    margin-top: 10px;
-    min-height:275px;
+.asideIndex2 {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 25em;
     border-radius: 5px;
-    background-image:url('image/photo1.jpg');
-    background-repeat: no-repeat;
-    background-position-y:center;
-    background-size:100%;
-     
+    background-color: #000; /* Couleur de fond en cas d'absence d'image */
+}
+
+.asideIndex2 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse l'espace disponible */
+    border-radius: 5px;
+}
+.boxIMG{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 25em;
+    border-radius: 5px;
+    background-color: #000; /* Couleur de fond en cas d'absence d'image */
+}
+.boxIMG img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse l'espace disponible */
+    border-radius: 5px;
 }
 .texteIndex2{
+    margin : 2%;
     text-align: justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
@@ -220,11 +230,11 @@ body {
     margin: 7% 12%;
     background-size: 100%;
     max-width: 1200px;
-    min-height: 375px;
+    min-height: 25em;
     
 }
 .asideForm{
-    height:375px;
+    min-height: 25em;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     margin: 0%;
@@ -233,7 +243,7 @@ body {
 }
 
 .texteForm{
-    min-height:375px;
+    min-height: 25em;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background-image: url('image/Contact.jpg');
@@ -242,7 +252,7 @@ body {
 }
 
 .aside{
-    min-height:375px;
+    min-height: 25em;
     margin: 0%;
     padding: auto;
     background-color: #ffffff;  
@@ -255,11 +265,10 @@ body {
     gap: 0em; /* Espacement entre les colonnes */
     margin: 7% 12%;
     max-width: 1200px;
-    min-height: 375px;
+    min-height: 25em;
     
 }
 .texteProjet {
-    min-height: 375px;
     padding-right: 1em;
     padding-left: 1em;
     text-align: justify;
@@ -270,7 +279,7 @@ body {
 .asideProjet{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    min-height: 375px;
+    min-height: 25em;
     background-image: url('image/projet.jpg');
     background-repeat: no-repeat;
     background-size:100%;
@@ -284,16 +293,17 @@ body {
     gap: 0em; /* Espacement entre les colonnes */
     margin: 7% 12%;
     max-width: 1200px;
-    min-height: 375px;
+    min-height: 25em;
     
 }
 .asideProjetJS{
-    min-height: 400px;
+    min-height: 25em;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     background-image: url('image/islande.jpg');
     background-repeat: no-repeat;
     background-size:110%;
+    margin-bottom : 20%;
 
 }
 .texteProjetJS {
@@ -302,8 +312,24 @@ body {
     text-align: justify;
     background: rgb(0, 0, 0);
     color: #ffffff;  
+    margin-bottom : 20%;
 }
+.asideProjetJS2{
+    min-height: 25em;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-image: url('image/JS2.jpg');
+    background-repeat: no-repeat;
+    background-size:110%;
 
+}
+.texteProjetJS2 {
+    padding-right: 1em;
+    padding-left: 1em;
+    text-align: justify;
+    background: rgb(0, 0, 0);
+    color: #ffffff;  
+}
 .containerProjetPy {
     display: grid;
     align-items: center; 
@@ -312,7 +338,7 @@ body {
     margin: 7% 12%;
     background: #000000;
     max-width: 1200px;
-    min-height: 375px;
+    min-height: 25em;
     
 }
 .textePy {
@@ -324,7 +350,7 @@ body {
     color: #ffffff;  
 }
 .asidePy{
-    min-height:375px;
+    min-height: 25em;
     margin: 0%;
     padding: auto;
     background-color: #000000;  
@@ -379,20 +405,21 @@ a:hover{
     border:none;
     border-radius: 3px;
     cursor: pointer;
-    left: 50;
-    right: 50;
+    /* left: 50;
+    right: 50; */
     background-color: #ffffff;
 }
 
 #envoyer:hover {
-    text-decoration: underline;
+    bottom:2px;
+    position: relative;
     
 }
 
 .success-message {
     display: none;
-    color:rgb(54, 102, 83)
-    margin-top: 10px;
+    color:rgb(54, 102, 83);
+    margin-top : 10px;
 }
 .error-message {
     display: none;
