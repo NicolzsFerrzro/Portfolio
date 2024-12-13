@@ -149,6 +149,7 @@ body {
     display: flex;
     flex-direction: column; 
     min-height: 100vh; 
+    min-width: max-content;
     margin: 0; 
     background: #000000;
    
