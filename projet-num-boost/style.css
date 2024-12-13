@@ -177,7 +177,6 @@ filter: brightness(1.2);
     justify-content: center; 
     align-items: center; 
     width: 35%;
-    min-width: 30em;
     margin: 4% auto; 
 }
 
@@ -232,7 +231,6 @@ filter: brightness(1.2);
     flex-flow:column;
     align-items: center; 
     width: 35%;
-    min-width: 30em;
     height: 25.7em;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -249,7 +247,6 @@ filter: brightness(1.2);
 .photoForm {
     height: 25.7em;
     width: 35%;
-    min-width: 30em;
     display: flex;
 }
 /* .aside{
