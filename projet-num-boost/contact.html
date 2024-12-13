@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" >
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Contact - Form</title>
+        <title>Contact - Formulaire</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,9 @@
         </header>
     <main>
         <div class="containerContact">
-            <div class="texteForm"></div>
+            <div class="photoForm">
+                <img src="image/Contact.jpg" alt="Photo maisonette couché de soleil">
+            </div>
             <div class="asideForm">
                 <h1 class="form">Formulaire de contact</h1>
                     <form id="contactForm">
@@ -44,16 +46,17 @@
                         <input type="email" id="email" placeholder="pierre.dupont@mailto.com" required>
                         <p>Votre message : </p>
                         <textarea id="message" rows="5" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id libero nec nunc vehicula auctor.Donec fermentum nisi et sapien faucibus, non gravida nisi lacinia. Curabitur tristique lectus eget risus facilisis varius.Aenean vitae augue sit amet nulla facilisis volutpat." required></textarea>
-                        <button type="submit" id="envoyer">Envoyer</button>
+                        <img src="image/timbreEnvoyer.png" alt="timbre" type="submit" id="envoyer">
+                        <div class="success-message"></div>
+                        <div class="error-message"></div>    
                     </form>
-                    <div class="success-message">Votre message a été envoyé</div>
-                    <div class="error-message">Une erreur s'est produite durant l'envoie.</div>
+                    
                 </div>
             </div>
         </div>
     </main>
     <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
+        document.getElementById("envoyer").addEventListener("click", function (e) {
         e.preventDefault(); // Empêche le rechargement de la page
 
         const name = document.getElementById("name").value.trim();
@@ -89,6 +92,8 @@
         .then(
             function (response) {
                 console.log("SUCCESS!", response.status, response.text);
+                document.querySelector(".success-message").textContent =
+                    "Envoyé !";
                 document.querySelector(".success-message").style.display = "block";
                 document.querySelector(".error-message").style.display = "none";
                 document.getElementById("contactForm").reset(); // Réinitialise le formulaire
@@ -96,7 +101,7 @@
             function (error) {
                 console.error("FAILED...", error);
                 document.querySelector(".error-message").textContent =
-                    "Une erreur s'est produite. Veuillez vérifier votre configuration.";
+                    "Une erreur s'est produite. Veuillez réessayer.";
                 document.querySelector(".error-message").style.display = "block";
                 document.querySelector(".success-message").style.display = "none";
             }

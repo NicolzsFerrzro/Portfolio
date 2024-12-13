@@ -3,11 +3,7 @@ font-family: "Mr Dafoe", cursive;
 font-family: "Quicksand", sans-serif;
  */
 
- @media (max-width: 768px) {
-    .containerIndex, .containerIndex2, .containerContact, .containerProjet {
-        grid-template-columns: 1fr; /* Une seule colonne sur petit écran */
-    }
-}
+
 
 
 input:focus {
@@ -18,7 +14,7 @@ input:focus {
 }
 .lien-icone:hover{
     position: relative;
-    top:2px;
+    bottom:2px;
 }
 
 .Moi{
@@ -35,6 +31,7 @@ input:focus {
     position: relative;
     top:2px;
     text-shadow: 5px 5px 10px #000000;
+    filter: brightness(1.2);
 
 }
 
@@ -45,10 +42,11 @@ input:focus {
     align-items: center; /* Aligne verticalement */
     border:none;
     background-color: #111111;
-    border-bottom:  2px solid  #333; /* Définir l'épaisseur, le style et la couleur du rebord */
-    border-radius: 5px; /* Arrondir les coins si nécessaire */
+    border-bottom:  2px solid  #333; 
+    border-radius: 5px; 
     margin: 0%;
     padding: 0%;
+    width:100%;
 }
 .footer { 
     display:flex;
@@ -57,8 +55,8 @@ input:focus {
     padding-top: 1%;
     background-color: #111111;
     border:none;
-    border-top: 2px solid #333; /* Définir l'épaisseur, le style et la couleur du rebord */
-    border-radius: 5px; /* Arrondir les coins si nécessaire */
+    border-top: 2px solid #333; 
+    border-radius: 5px; 
     bottom: 0%;
     height: 6%;
     width:100%;
@@ -149,20 +147,25 @@ h1{
 
 body {
     display: flex;
-    flex-direction: column; /* Empile les éléments verticalement */
-    min-height: 100vh; /* Force le body à occuper toute la hauteur de la page */
-    margin: 0; /* Supprime les marges par défaut */
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0; 
     background: #000000;
    
 }
+#photodenico:hover {
+filter: brightness(1.2);
+}
 
 #photodenico {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: solid #ffffff2d;
-    left:80%;
-    top: 20px;
-    width: 120px; /* Largeur de l'image */
-    height: 120px; /* Hauteur de l'image */
+    width: 10em; 
+    height: 10em; 
+    size-adjust: auto;
     border-radius: 50%; /* Cercle parfait */
     object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
 }
@@ -171,15 +174,14 @@ body {
 .containerIndex {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centre les éléments verticalement */
-    align-items: center; /* Centre les éléments horizontalement */
-    width: 500px;
-    margin: 0% auto; 
-    margin-bottom: 7%;
+    justify-content: center; 
+    align-items: center; 
+    width: 35%;
+    min-width: 30em;
+    margin: 4% auto; 
 }
 
 .texteIndex {
-    margin : 2%;
     text-align: justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
@@ -189,74 +191,73 @@ body {
 .asideIndex2 {
     display: flex;
     justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    height: 25em;
-    border-radius: 5px;
-    background-color: #000; /* Couleur de fond en cas d'absence d'image */
+    align-items: center; 
+   
 }
 
 .asideIndex2 img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse l'espace disponible */
+    object-fit: cover; 
     border-radius: 5px;
 }
 .boxIMG{
     display: flex;
     justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    height: 25em;
+    align-items: center; 
     border-radius: 5px;
-    background-color: #000; /* Couleur de fond en cas d'absence d'image */
+    
 }
 .boxIMG img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse l'espace disponible */
+    object-fit: cover; 
     border-radius: 5px;
 }
 .texteIndex2{
-    margin : 2%;
     text-align: justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
 }
 
 .containerContact {
-    display: grid;
+    display:flex;
+    flex-flow:wrap;
+    justify-content: center;
     align-items: center; 
-    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
-    gap: 0em; /* Espacement entre les colonnes */
-    margin: 7% 12%;
-    background-size: 100%;
-    max-width: 1200px;
-    min-height: 25em;
-    
+    margin: 7% auto;
 }
 .asideForm{
-    min-height: 25em;
+    display:flex;
+    flex-flow:column;
+    align-items: center; 
+    width: 35%;
+    min-width: 30em;
+    height: 25.7em;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    margin: 0%;
-    padding: auto;
-    background-color: #ffffff;   
+    background-color: #ffffff; 
+      
 }
 
-.texteForm{
-    min-height: 25em;
+.photoForm img{
+    min-height:100%;
+    min-width: 100%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background-image: url('image/Contact.jpg');
-    background-repeat: no-repeat;
-    background-size: 120%;
 }
-
-.aside{
+.photoForm {
+    height: 25.7em;
+    width: 35%;
+    min-width: 30em;
+    display: flex;
+}
+/* .aside{
     min-height: 25em;
     margin: 0%;
     padding: auto;
     background-color: #ffffff;  
-}
+} */
 
 .containerProjet {
     display: grid;
@@ -367,63 +368,57 @@ a:hover{
 
 /* //////////////style pour page contact///////////////////////// */
 
-.form{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    text-align: center;
-}
 
 #contactForm {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
-    max-width: 500px;
-    margin-left: 15px;
+    justify-content:baseline;
+    width: 90%;
 }
-#name{
-    width:18%;
+#name, #email{
+    min-width:10em;
     border: none;
-    
-}
-#email{
-    width: 35%;
-    border: none;
+    text-align: center;
     
 }
 #message {
-    width: 90%;
-    height: 90px;
-    border:none;
-    border-radius: 3px;
+    min-width: 30em;
+    border: none;
+    text-align: center;
+}
+
+#envoyer img{
+    object-fit: cover;
 }
 
 #envoyer {
-    font-family: "Mr Dafoe", cursive;
-    font-weight: 100;
-    font-size: 2em;
-    color: rgb(0, 0, 0);
-    border:none;
-    border-radius: 3px;
+    position:relative;
+    bottom:39%;
+    left:45%;
     cursor: pointer;
-    /* left: 50;
-    right: 50; */
-    background-color: #ffffff;
+    height: 15%;
+    transform: rotate(6deg);
 }
 
 #envoyer:hover {
-    bottom:2px;
-    position: relative;
+    filter: brightness(1.2);
+    
     
 }
 
 .success-message {
+    position: relative;
+    bottom:10%;
     display: none;
-    color:rgb(54, 102, 83);
-    margin-top : 10px;
+    color:rgb(15, 66, 90);
+    font-size: x-large;
 }
 .error-message {
+    position: relative;
+    bottom:10%;
     display: none;
-    color: rgb(128, 58, 0);
-    margin-top: 10px;
+    color: rgb(128, 26, 0);
+    font-size: x-large;
 }
 
