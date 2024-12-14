@@ -26,10 +26,9 @@ input:focus {
 
 }
 .Moi:hover{
-    position: relative;
-    top:2px;
-    text-shadow: 5px 5px 10px #000000;
     filter: brightness(1.2);
+transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 
 }
 
@@ -139,6 +138,7 @@ h1{
     font-weight: 100;
     font-size: 2em;
     padding-left: 5px;
+    margin:0;
 }
 
 
@@ -146,6 +146,7 @@ body{
     display: flex;
     flex-direction: column; 
     min-width:fit-content;
+    min-height: max-content;
     margin: 0; 
     background: #000000;
    
@@ -153,76 +154,118 @@ body{
 
 #photodenico:hover {
 filter: brightness(1.2);
+transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.photoId {
+    display:flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center
+}
 #photodenico {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     border: solid #ffffff2d;
     width: 10em; 
     height: 10em; 
     size-adjust: auto;
-    border-radius: 50%; /* Cercle parfait */
-    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le cercle */
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin:10% auto;
+}
+#boutonSuivant, #boutonPrecedent{
+    border:none;
+    background-color: #111111;
+    color: #ffffff1f;
+    cursor: pointer;
+}
+#boutonPrecedent{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius : 10px;
+}
+#boutonSuivant{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius : 10px;
 }
 
 
 .containerIndex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
+    display:flex;
+    flex-flow:row;
+    justify-content: center;
     align-items: center; 
-    width: 35%;
-    min-width: 30em;
-    margin: 4% auto; 
-    padding-right: 1em;
-    padding-left: 1em;
+    margin: 0 auto;
+    margin-bottom: 4%;
+    height: 23em;
+    
 }
 
 .texteIndex {
-    display:block;
-    text-align: justify;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 32.9%;
+    height: 23em;
+    margin-right: 1em;
+    margin-left: 1em;
+    text-align:justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
     
+    
 }
 
-.asideIndex2 {
+.imgIndex {
+    width: 35%;
+    min-width: 30em;
+    height: 23em;
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; 
    
 }
 
-.asideIndex2 img {
-    display:block;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; 
-    border-radius: 5px;
-}
-.boxIMG{
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; 
-    border-radius: 5px;
+.imgIndex img {
     
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: inset 5px 5px 20px black;
 }
-.boxIMG img {
-    display:none;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; 
-    border-radius: 5px;
-}
+/* .containerIndex2 {
+    display:flex;
+    flex-flow:wrap;
+    justify-content: center;
+    align-items: center; 
+    margin: 7% auto;
+    min-height: 25em;
+} */
 .texteIndex2{
-    display:none;
-    text-align: justify;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1em;
+    width: 30%;
+    min-width: 30em;
+    height: 23em;
+    text-align:justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
 }
+.imgIndex2{
+    width: 33%;
+    height: 23em;
+    min-width: 30em;
+    display: flex;
+    
+}
+.imgIndex2 img {
+    min-height:100%;
+    min-width: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
 
 .containerContact {
     display:flex;
@@ -443,7 +486,7 @@ a:hover{
 }
 #name, #email, #message{
     position:relative;
-    bottom:40%;
+    bottom:30%;
      
 
 }
