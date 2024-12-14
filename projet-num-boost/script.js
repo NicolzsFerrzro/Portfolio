@@ -34,12 +34,3 @@ document.getElementById("boutonPrecedent").addEventListener("click", () => {
             <img src="image/photo1.jpg" alt="moi sur une pirogue avec mes collegues">
         </div>`
 })
-// document.querySelector(".containerIndex2").addEventListener("mouseover", function (bande2) {
-    
-//     document.querySelector(".texteIndex").style.display = "block";
-//     document.querySelector(".imgIndex img").style.display = "block";
-//     document.querySelector(".texteIndex2").style.display = "none";
-//     document.querySelector(".imgIndex2 img").style.display = "none";
-// })
-
-// document.querySelector("html").addEventListener("resize", function (inverse){})
