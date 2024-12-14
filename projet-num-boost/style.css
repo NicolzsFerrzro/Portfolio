@@ -51,20 +51,6 @@ transform: translateY(-10px);
     align-items: center;
     gap:5px;
 }
-.footer { 
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    padding-top: 1%;
-    background-color: #111111;
-    border:none;
-    border-top: 2px solid #333; /* Définir l'épaisseur, le style et la couleur du rebord */
-    border-radius: 5px; /* Arrondir les coins si nécessaire */
-    bottom: 0%;
-    height: 6%;
-    width:100%;
-}
-
 
 nav ul {
     list-style-type:none;
@@ -148,16 +134,16 @@ h1{
     margin:0;
 }
 
-
 body{
+    
     display: flex;
     flex-direction: column; /* Empile les éléments verticalement */
-    min-height: 100%; /* Force le body à occuper toute la hauteur de la page */
     margin: 0; /* Supprime les marges par défaut */
     background: #000000;
    
 }
-/* main { flex: 1; } */
+main { flex: 1; 
+    min-height: 100%}
 
 #photodenico:hover {
 filter: brightness(1.2);
@@ -358,8 +344,6 @@ transform: translateY(-10px);
     justify-content: center;
     align-items: center; 
     margin: 7% auto;
-    height: 23em;
-    
 }
 .asideProjetJS{
     height: 23em;
@@ -396,7 +380,6 @@ transform: translateY(-10px);
     width: 35%;
     min-width: 30em;
     display: flex;
-    margin-bottom:  7% ;
 }
 .asideProjetJS2 img{
     min-height:100%;
@@ -417,7 +400,6 @@ transform: translateY(-10px);
     text-align:justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
-    margin-bottom:  7% ;
 }
 .containerProjetPy {
     display:flex;
@@ -460,10 +442,19 @@ a:hover{
     box-shadow: none;
     
 }
-
-
-
-
+.footer { 
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 1%;
+    background-color: #111111;
+    border:none;
+    border-top: 2px solid #333; /* Définir l'épaisseur, le style et la couleur du rebord */
+    border-radius: 5px; /* Arrondir les coins si nécessaire */
+    bottom: 0%;
+    height: 6%;
+    width:100%;
+}
 
 /* //////////////style pour page contact///////////////////////// */
 
