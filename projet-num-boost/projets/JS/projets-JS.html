@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" >
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Projets - JavaScript</title>
         <link rel="stylesheet" href="../../style.css">
@@ -11,6 +11,41 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <script>
+        function checkScreenWidth() {
+                if (window.innerWidth <= 768) {
+                    // Selectionner les div à modifer
+                    const container = document.querySelector('.containerProjetJS2');
+                    const reference = document.querySelector('.texteProjetJS2');
+                    const div = document.querySelector('.asideProjetJS2');
+                
+                    // modifier le nom de la class des divs pour y mettre le nom d'une classe avec un style correspondant
+                    // container.className = ".containerProjetJS"
+                    // reference.className = ".texteProjetJS"
+                    // div.className = ".asideProjetJS"  
+
+                    // Ajouter reference et div dans le container puis les ordonner mettre div après reference, image apres texte
+                    // document.container.appendChild(reference)
+                    // document.container.appendChild(div)
+                    // Déplace la div après "reference"
+                    reference.after(div);
+                    
+                    
+                    // const element = document.querySelector('.my-element');
+                    // element.classList.add('active');  // Ajoute une classe
+                    // element.classList.remove('hidden');  // Retire une classe
+                    div.classList.toggle('.asideProjetJS'); // Alterne la classe
+
+                    // Inverser les enfants horizontalement
+                    container.style.flexDirection = 'row-reverse';  
+        }};
+                // Vérifier au chargement
+        checkScreenWidth();
+
+        // Vérifier à chaque redimensionnement
+        window.addEventListener('resize', checkScreenWidth);
+
+        </script>
         <header class="header">
             <nav class="nav">
                 <ul>

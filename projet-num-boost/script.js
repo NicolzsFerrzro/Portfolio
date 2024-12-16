@@ -34,3 +34,22 @@ document.getElementById("boutonPrecedent").addEventListener("click", () => {
             <img src="image/photo1.jpg" alt="moi sur une pirogue avec mes collegues">
         </div>`
 })
+
+// function annulerQuiconce (divTexteAchanger,divImageAchanger,divTexte,divImage ){
+//     divTexteAchanger = divTexte
+//     divImageAchanger = divImage
+// return divTexteAchanger,divImageAchanger
+
+// }annulerQuiconce(texteProjetJS2,asideProjetJS2,texteProjetJS,asideProjetJS)
+
+
+
+    // const element = document.querySelector('.my-element');
+    // element.classList.add('active');  // Ajoute une classe
+    // element.classList.remove('hidden');  // Retire une classe
+    // element.classList.toggle('highlight'); // Alterne la classe
+
+    
+
+    // Ou avant
+    // reference.before(div);
