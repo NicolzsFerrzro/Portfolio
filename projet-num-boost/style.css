@@ -283,33 +283,34 @@ transform: translateY(-1px);
     justify-content: center;
     align-items: center; 
     margin: 7% auto;
-    
 }
 .asideForm{
     display:flex;
     flex-flow:column;
     align-items: center; 
-    width: 35%;
-    min-width: 30em;
-    height: 25.7em;
+    width: 30em;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: #fffec8; 
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.5);
-      
+    display: flex;
+    overflow: hidden;
+    height: 23em;
 }
 
 .photoForm img{
+    object-fit: cover; 
+    object-position: center;
     min-height:100%;
     min-width: 100%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 .photoForm {
-    height: 25.7em;
-    width: 35%;
-    min-width: 30em;
+    height: 23em;
+    max-width: 30em;
     display: flex;
+    overflow: hidden;
 }
 /* .aside{
     min-height: 25em;
@@ -331,21 +332,22 @@ transform: translateY(-1px);
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    height: 25.7em;
-    width: 35%;
-    min-width: 30em;
+    width: 30em;
+    height: 23em;
     text-align:justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
     
 }
 .asideProjet{
-    height: 25.7em;
-    width: 35%;
-    min-width: 30em;
+    height: 23em;
+    max-width: 30em;
     display: flex;
+    overflow: hidden;
 }
 .asideProjet img{
+    object-fit: cover; 
+    object-position: center;
     min-height:100%;
     min-width: 100%;
     border-top-right-radius: 5px;
@@ -472,24 +474,26 @@ a:hover{
 
 
 #contactForm {
+    object-fit: cover; 
+    object-position: center;
     display: flex;
     flex-flow:column;
     justify-content: space-between;
-    gap:2em;
+    gap:1em;
     width: 90%;
+    height: 90%;
     background-color: #fffec8; 
     
     
 }
 #name, #email{
-    min-width:10em;
     border: none;
     background-color: #fffec8; 
     
 }
+#name{width:50%;}
 #message {
-    min-width: 25em;
-    height:2em;
+    width: 90%;
     text-align: center;
     border: none;
     margin:0;
@@ -498,19 +502,19 @@ a:hover{
 }
 #name, #email, #message{
     position:relative;
-    bottom:30%;
+    bottom:40%;
      
 
 }
 
 .form{
     position:relative;
-    bottom:30%;
+    bottom:20%;
     background-color: #fffec8; 
 }
 #envoyer {
     position: relative;
-    left:40%;
+    left:38%;
     transform: rotate(6deg);
 }
 
