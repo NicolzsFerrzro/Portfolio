@@ -10,8 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <script>
-            // function checkScreenWidth() {
-            window.addEventListener('resize', () => {
+
+            function checkScreenWidth() {
                 if (window.innerWidth < 768 || window.innerWidth === 768) {
                     // Selectionner les div à modifer
                     const container = document.querySelector('.containerProjetJS2');
@@ -37,11 +37,11 @@
         
                     // Inverser les enfants horizontalement
                     container.style.flexDirection = 'row-reverse';  
-        }});
+        }};
                 // Vérifier au chargement
-        // checkScreenWidth();
+        checkScreenWidth()
         
-        // window.addEventListener('resize', checkScreenWidth)
+        window.addEventListener('resize', checkScreenWidth)
         
         </script>
     </head>
