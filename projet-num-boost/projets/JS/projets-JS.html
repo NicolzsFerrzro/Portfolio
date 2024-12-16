@@ -5,14 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Projets - JavaScript</title>
         <link rel="stylesheet" href="../../style.css">
-        <script src="../../script.js"defer></script>
+        <script src="../../script.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    </head>
-    <body>
         <script>
-        function checkScreenWidth() {
+            function checkScreenWidth() {
                 if (window.innerWidth <= 768) {
                     // Selectionner les div à modifer
                     const container = document.querySelector('.containerProjetJS2');
@@ -23,7 +21,7 @@
                     // container.className = ".containerProjetJS"
                     // reference.className = ".texteProjetJS"
                     // div.className = ".asideProjetJS"  
-
+        
                     // Ajouter reference et div dans le container puis les ordonner mettre div après reference, image apres texte
                     // document.container.appendChild(reference)
                     // document.container.appendChild(div)
@@ -35,17 +33,19 @@
                     // element.classList.add('active');  // Ajoute une classe
                     // element.classList.remove('hidden');  // Retire une classe
                     div.classList.toggle('.asideProjetJS'); // Alterne la classe
-
+        
                     // Inverser les enfants horizontalement
                     container.style.flexDirection = 'row-reverse';  
         }};
                 // Vérifier au chargement
         checkScreenWidth();
-
+        
         // Vérifier à chaque redimensionnement
         window.addEventListener('resize', checkScreenWidth);
-
+        
         </script>
+    </head>
+    <body>
         <header class="header">
             <nav class="nav">
                 <ul>

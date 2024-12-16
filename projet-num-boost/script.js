@@ -53,3 +53,4 @@ document.getElementById("boutonPrecedent").addEventListener("click", () => {
 
     // Ou avant
     // reference.before(div);
+
