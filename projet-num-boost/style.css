@@ -218,7 +218,6 @@ transform: translateY(-1px);
     justify-content: center;
     align-items: center;
     width: 30em;
-    max-height: 23em;
     text-align:justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
@@ -256,11 +255,11 @@ transform: translateY(-1px);
     justify-content: center;
     align-items: center;
     width: 30em;
-    max-height: 23em;
     text-align:justify;
     background: rgb(0, 0, 0);
     color: #ffffff;
     margin: auto 1%;
+    /* border: 1px solid red; */
 }
 .imgIndex2{
     max-width: 30em;
