@@ -53,4 +53,6 @@ document.getElementById("boutonPrecedent").addEventListener("click", () => {
 
     // Ou avant
     // reference.before(div);
+    
 
+//OnScroll css transition apparition fluide quand on descend sur la page chaque element apparait
