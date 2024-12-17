@@ -11,10 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         
         <script>
-        
-        window.addEventListener('load', () => {
-            if (window.innerWidth < 768 || window.innerWidth === 768) {
-            //     // Selectionner les div à modifer
+            function annulerQuinconce(){
                 const container = document.querySelector('.containerProjetJS2');
                 const reference = document.querySelector('.texteProjetJS2');
                 const div = document.querySelector('.asideProjetJS2');
@@ -24,8 +21,38 @@
                 const container2 = document.querySelector('.containerProjetJS');
                 container2.appendChild(div)
                 container2.appendChild(reference)
+            }
+
+            function remettreQuinconce(){
+                const container = document.querySelector('.containerProjetJS2');
+                const reference = document.querySelector('.texteProjetJS2');
+                const div = document.querySelector('.asideProjetJS2');
+                reference.style.order = 2; // Change l'ordre de l'élément 1
+                div.style.order = 1; // Change l'ordre de l'élément 2
+                container.appendChild(div)
+                container.appendChild(reference)
+            }
+        
+        
+        window.addEventListener('load', () => {
+            const width = window.innerWidth
+            if (width < 768 || width === 768) {
+                annulerQuinconce()
         
         }});
+
+        window.addEventListener('resize', function () {
+            const width = window.innerWidth
+            if (window.innerWidth < 897) {
+                annulerQuinconce()
+            } else {
+                remettreQuinconce()
+                
+            }
+        
+        });
+
+
         
         </script>
     </head>
