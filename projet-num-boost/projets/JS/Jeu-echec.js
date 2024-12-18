@@ -1,48 +1,47 @@
 class Piece {
-    constructor(type, color, position) {
-        this.type = type; // Exemple : "roi", "dame", "cavalier"
-        this.color = color; // "blanc" ou "noir"
+    constructor(couleur, position) {
+        this.couleur = couleur; // "blanc" ou "noir"
         this.position = position; // Exemple : "e4"
     }
-    isValidMove(newPosition) {
-        // Logique simplifiée pour le déplacement du roi
-        const [col1, row1] = [this.position[0], parseInt(this.position[1])];
-        const [col2, row2] = [newPosition[0], parseInt(newPosition[1])];
-
-        const colDiff = Math.abs(col1.charCodeAt(0) - col2.charCodeAt(0));
-        const rowDiff = Math.abs(row1 - row2);
-
-        return colDiff <= 1 && rowDiff <= 1; // Le roi peut se déplacer d'une case dans toutes les directions
-    }
-    isValidMove(newPosition) {
-        const [col1, row1] = [this.position[0], parseInt(this.position[1])];
-        const [col2, row2] = [newPosition[0], parseInt(newPosition[1])];
-
-        return col1 === col2 || row1 === row2; // La tour se déplace en ligne droite
+    
+    deplacement(nouvellePosition) {
+        if (this.mouvementValide(nouvellePosition)) {
+            this.position = nouvellePosition;
+            console.log(`${this.type} ${this.couleur} déplacée en ${nouvellePosition}`);
+        } else {
+            console.log(`Déplacement invalide pour ${this.type} ${this.couleur}`);
+        }
     }
 }
+class Roi extends Piece {
+    mouvementValide(nouvellePosition) {
+        const [coloneActuelle, ligneActuelle] = [this.position[0], parseInt(this.position[1])]; // séparer colone et ligne de position et en faire 2 variables
+        const [coloneCible, ligneCible] = [nouvellePosition[0], parseInt(nouvellePosition[1])];
+
+    // coloneActuelle === ligneActuelle || coloneCible === ligneCible; // verification de l'égalité des colones ou des lignes A === A (meme colone donc déplacement verticale)
+    
+
+        // Le roi ne peut se déplacer que d'une case (horizontal, vertical, diagonal)
+        const coloneDifference = Math.abs(coloneActuelle.charCodeAt(0) - coloneCible.charCodeAt(0)); // soustrait les valeur ASCII
+        const ligneDifference = Math.abs(ligneActuelle - ligneCible); // math.abs donne un nombre absolue
+
+        return coloneDifference <= 1 && ligneDifference <= 1;
+    }
+}
+// Création d'un roi blanc
+const roiBlanc = new Roi('blanc', 'e1');
+
+// Déplacer le roi blanc
+roiBlanc.deplacement('e2'); // Valide : Le roi se déplace d'une case
+roiBlanc.deplacement('e4'); // Invalide : Déplacement de plus d'une case
 // Déplacement et validation
-console.log(roiBlanc.isValidMove('e2')); // true
-roiBlanc.move('e2'); // Déplace le roi en e2
+
+console.log(Piece.mouvementValide('e2')); // true
+Piece.deplacement('e2'); 
+
 
 // Zone de Jeu Echequier 
 
-// Objet Piece{}
-//  Attributs : type, couleur, position
-//  Methode : Deplacement autorisé}
-
-//class Personne {
-//     // Constructeur : méthode spéciale pour initialiser les objets
-//     constructor(nom, age) {
-//         this.nom = nom; // Propriété "nom"
-//         this.age = age; // Propriété "age"
-//     }
-
-//     // Méthode : une action ou un comportement
-//     saluer() {
-//         console.log(`Bonjour, je m'appelle ${this.nom} et j'ai ${this.age} ans.`);
-//     }
-// }
 
 // // Créer des objets basés sur la classe
 // const personne1 = new Personne("Alice", 30);
