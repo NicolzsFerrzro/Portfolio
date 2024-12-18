@@ -29,6 +29,50 @@
             </div>
         </header>
     <main>
+        <script>
+            // Fonction pour annuler la disposition en quinconce
+            function annulerQuinconce() {
+                const references = document.querySelectorAll('.textePy2');
+                const divs = document.querySelectorAll('.asidePy2');
+        
+                references.forEach(reference => {
+                    reference.style.order = 1; // Place les éléments texte en premier
+                });
+        
+                divs.forEach(div => {
+                    div.style.order = 2; // Place les éléments aside en second
+                });
+            }
+        
+            // Fonction pour remettre la disposition en quinconce
+            function remettreQuinconce() {
+                const references = document.querySelectorAll('.textePy2');
+                const divs = document.querySelectorAll('.asidePy2');
+        
+                references.forEach(reference => {
+                    reference.style.order = 2; // Place les éléments texte en second
+                });
+        
+                divs.forEach(div => {
+                    div.style.order = 1; // Place les éléments aside en premier
+                });
+            }
+        
+            // Fonction pour gérer le changement de disposition
+            function handleResize() {
+                const width = window.innerWidth;
+        
+                if (width < 897) {
+                    annulerQuinconce(); // Annuler la disposition en quinconce
+                } else {
+                    remettreQuinconce(); // Remettre la disposition en quinconce
+                }
+            }
+        
+            // Ajouter les écouteurs d'événements
+            window.addEventListener('load', handleResize); // Vérifier au chargement de la page
+            window.addEventListener('resize', handleResize); // Vérifier lors du redimensionnement
+        </script>
         <div class="containerProjetPy">
             <div class="textePy">
             <h1>Python - Black-Jack</h1>
@@ -41,13 +85,13 @@
                 </video>
             </div>
         </div>
-        <div class="containerProjetPy">
-            <div class="asidePy">
+        <div class="containerProjetPy2">
+            <div class="asidePy2">
                 <video controls width="520px" height="365px">
                 <source src="video/convertisseur.mkv" type="video/mp4">
                 </video>
             </div>
-            <div class="textePy"><h1>Python - Convetisseur de mesures</h1>
+            <div class="textePy2"><h1>Python - Convetisseur de mesures</h1>
                 <p>Le convertisseur de mesures est un programme qui permet de convertir des cm en pouces et inversement. Cet exercice m'a permis d'apprendre à retravailler mon code avec des fonctions pour le rendre plus concis et sans répétition. J'ai également appris à rendre le code moins spécifique et plus ouvert pour faciliter son évolution, il est désormais plus simple d'intégrer de nouvelles unités de conversion grâce aux collections.</p>
                 <a target="_blank" href="https://github.com/NicolzsFerrzro/Python/tree/main/Python/Convertisseur%20cm-pouce" id="liens">Convertisseur de mesures</a>
             </div>
@@ -64,13 +108,13 @@
                 </video>
             </div>
         </div>
-        <div class="containerProjetPy">
-            <div class="asidePy">
+        <div class="containerProjetPy2">
+            <div class="asidePy2">
                 <video controls width="520px" height="365px">
                     <source src="video/jeu-de-math.mkv" type="video/mp4">
                 </video>
             </div>
-            <div class="textePy">
+            <div class="textePy2">
             <h1>Python - Jeu de Math</h1>
             <p>Le programme Jeu de math est un programme où il faut simplement faire les opérations indiquées, avec un systeme de points.</p>
             <a target="_blank" href="https://github.com/NicolzsFerrzro/Python/tree/main/Python/Jeu_de_math" id="liens">Jeu de Math</a>
@@ -88,13 +132,13 @@
                 </video>
             </div>
         </div>
-        <div class="containerProjetPy">
-            <div class="asidePy">
+        <div class="containerProjetPy2">
+            <div class="asidePy2">
                 <video controls width="520px" height="365px">
                     <source src="video/cuisson-oeufs.mkv" type="video/mp4">
                 </video>
             </div>
-            <div class="textePy">
+            <div class="textePy2">
             <h1>Python - Cuisson des Oeufs</h1>
             <p>Cuisson des Oeufs est un programme qui se comporte comme un auto cuiseur, on choisit ce que l'on veut dans un menu, puis le programme lance la cuisson et le minuteur défile. Exercice sur les collections qui permettent de le rendre plus adaptable et modifiable par la suite en ajoutant de nouvelles recettes et de nouveaux temps de cuisson.</p>
             <a target="_blank" href="https://github.com/NicolzsFerrzro/Python/tree/main/Python/Cuisson-des-oeufs" id="liens">Cuisson-des-oeufs</a>
@@ -112,13 +156,13 @@
                 </video>
             </div>
         </div>
-        <div class="containerProjetPy">
-            <div class="asidePy">
+        <div class="containerProjetPy2">
+            <div class="asidePy2">
                 <video controls width="520px" height="365px">
                     <source src="video/QCM.mkv" type="video/mp4">
                 </video>
             </div>
-            <div class="textePy">
+            <div class="textePy2">
             <h1>Python - QCM</h1>
             <p>Le QCM est un éditeur de question à choix multiple, les questions sont placées dans un ordre aléatoire ainsi que les réponses, de sorte que chaque élèves ne puisse pas recopier sur celui d'à coté. Ce fût un travail sur les fonctions et les listes.</p>
             <a target="_blank" href="https://github.com/NicolzsFerrzro/Python/tree/main/Python/QCM" id="liens">QCM</a>

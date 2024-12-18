@@ -21,6 +21,9 @@ class Piece {
         return col1 === col2 || row1 === row2; // La tour se déplace en ligne droite
     }
 }
+// Déplacement et validation
+console.log(roiBlanc.isValidMove('e2')); // true
+roiBlanc.move('e2'); // Déplace le roi en e2
 
 // Zone de Jeu Echequier 
 
