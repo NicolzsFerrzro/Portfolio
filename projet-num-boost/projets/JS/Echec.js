@@ -63,20 +63,20 @@ cases.forEach(container => {
     container.addEventListener('drop', drop); // Action de déposer
 });
 // Début du glisser
-function dragStart(e) {
-    e.dataTransfer.setData('text/plain', e.currentTarget.id); // Utilise l'ID existant
+function dragStart(piece) {
+    piece.dataTransfer.setData('text/plain', piece.currentTarget.id);
 }
 
 // Permet au conteneur de recevoir un élément déplaçable
-function dragOver(e) {
-    e.preventDefault(); // Autorise le dépôt
+function dragOver(piece) {
+    piece.preventDefault(); // Autorise le dépôt
 }
 
 // Déplacement de l'élément
-function drop(e) {
-    e.preventDefault();
-    const id = e.dataTransfer.getData('text/plain'); // Récupère l'ID
+function drop(piece) {
+    piece.preventDefault();
+    const id = piece.dataTransfer.getData('text/plain'); // Récupère l'ID
     const draggable = document.getElementById(id); // Récupère l'élément par son ID
     draggable.style.opacity = '1'; // Rétablit l'opacité
-    e.target.appendChild(draggable); // Ajoute l'élément au conteneur cible
+    piece.currentTarget.appendChild(draggable); // Ajoute l'élément au conteneur cible
 }
