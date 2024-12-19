@@ -3,38 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout/release/v4.0.0/css/line.css">
-    <script src="Jeu-echec.js" defer></script>
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Echec</title>
+    <link rel="stylesheet" href="Echec.css">
+    <script src="Echec.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 id="head-text">Echec</h1>
-    <div id="Echiquier">
-        <div id="A1"></div>
-        <div id="A2"></div>
-        <div id="A3"></div>
-        <div id="A4"></div>
-        <div id="A5"></div>
-        <div id="A6"></div>
-        <div id="A7"></div>
-        <div id="A8"></div>
-    
-        <div id="B1"></div>
-        <div id="B2"></div>
-        <div id="B3"></div>
-        <div id="B4"></div>
-        <div id="B5"></div>
-        <div id="B6"></div>
-        <div id="B7"></div>
-        <div id="B8"></div>
-    </div>
-    <div id="RoiBlanc"></div>
-    <div id="RoiNoir"></div>
+    <div id="echiquier">
+        <div id="A1" class="container" style="background-color: black;"></div>
+        <div id="A2" class="container" style="background-color: rgb(255, 248, 226);"><p id="noir" class="draggable" draggable="true"><img src="../../image/pion.png" height="80px"></p></div>
+        <div id="A3" class="container" style="background-color: black;"></div>
+        <div id="A4" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="A5" class="container" style="background-color: black;"></div>
+        <div id="A6" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="A7" class="container" style="background-color: black;"></div>
+        <div id="A8" class="container" style="background-color: rgb(255, 248, 226);"></div>
 
+        <div id="B1" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="B2" class="container" style="background-color: black;"></div>
+        <div id="B3" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="B4" class="container" style="background-color: black;"></div>
+        <div id="B5" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="B6" class="container" style="background-color: black;"></div>
+        <div id="B7" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="B8" class="container" style="background-color: black;"></div>
+    
+        <div id="C1" class="container" style="background-color: black;"></div>
+        <div id="C2" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="C3" class="container" style="background-color: black;"></div>
+        <div id="C4" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="C5" class="container" style="background-color: black;"></div>
+        <div id="C6" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="C7" class="container" style="background-color: black;"></div>
+        <div id="C8" class="container" style="background-color: rgb(255, 248, 226);"></div>
+
+        <div id="D1" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="D2" class="container" style="background-color: black;"></div>
+        <div id="D3" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="D4" class="container" style="background-color: black;"></div>
+        <div id="D5" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="D6" class="container" style="background-color: black;"></div>
+        <div id="D7" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="D8" class="container" style="background-color: black;"></div>
+
+        <div id="E1" class="container" style="background-color: black;"></div>
+        <div id="E2" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="E3" class="container" style="background-color: black;"></div>
+        <div id="E4" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="E5" class="container" style="background-color: black;"></div>
+        <div id="E6" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="E7" class="container" style="background-color: black;"></div>
+        <div id="E8" class="container" style="background-color: rgb(255, 248, 226);"></div>
+
+        <div id="F1" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="F2" class="container" style="background-color: black;"></div>
+        <div id="F3" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="F4" class="container" style="background-color: black;"></div>
+        <div id="F5" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="F6" class="container" style="background-color: black;"></div>
+        <div id="F7" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="F8" class="container" style="background-color: black;"></div>
+    
+        <div id="G1" class="container" style="background-color: black;"></div>
+        <div id="G2" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="G3" class="container" style="background-color: black;"></div>
+        <div id="G4" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="G5" class="container" style="background-color: black;"></div>
+        <div id="G6" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="G7" class="container" style="background-color: black;"></div>
+        <div id="G8" class="container" style="background-color: rgb(255, 248, 226);"></div>
+
+        <div id="H1" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="H2" class="container" style="background-color: black;"></div>
+        <div id="H3" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="H4" class="container" style="background-color: black;"></div>
+        <div id="H5" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="H6" class="container" style="background-color: black;"><p id="blanc" class="draggable" draggable="true"><img src="../../image/pion.png" height="80px"></p></div>
+        <div id="H7" class="container" style="background-color: rgb(255, 248, 226);"></div>
+        <div id="H8" class="container" style="background-color: black;"></div>
+    </div>
+    
 </body>
 </html>

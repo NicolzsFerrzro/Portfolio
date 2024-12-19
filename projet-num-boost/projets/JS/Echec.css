@@ -1,0 +1,35 @@
+/* Centrer tout le contenu de la page */
+body {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+    margin: 0; 
+    background-color: #f0f0f0; 
+}
+
+#echiquier {
+    display:flex;
+    
+    flex-flow: wrap;
+    height:640px;
+    width:640px;
+}
+
+#echiquier div {
+    align-items: center; 
+    justify-content: center; 
+    display:flex;
+    height:80px;
+    width:80px;
+
+}
+.draggable:hover {
+    cursor: grab;
+   
+}
+
+.draggable:active {
+    cursor: grabbing;
+    
+}
