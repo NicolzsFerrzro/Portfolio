@@ -3,6 +3,7 @@ body {
     display: flex;
     align-items: center; 
     justify-content: center; 
+    gap: 20px;
     min-height: 100vh; 
     margin: 0; 
     background-color: #f0f0f0; 
@@ -32,4 +33,11 @@ body {
 .draggable:active {
     cursor: grabbing;
     
+}
+
+.piecesPrises{
+    display: flex;
+    height:260px;
+    width:260px;
+    border: 2px solid black;
 }

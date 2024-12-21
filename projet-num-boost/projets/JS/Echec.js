@@ -78,5 +78,24 @@ function drop(piece) {
     const id = piece.dataTransfer.getData('text/plain'); // Récupère l'ID
     const draggable = document.getElementById(id); // Récupère l'élément par son ID
     draggable.style.opacity = '1'; // Rétablit l'opacité
-    piece.currentTarget.appendChild(draggable); // Ajoute l'élément au conteneur cible
+
+    piece.currentTarget.appendChild(draggable); // Ajoute la piece dans la case
+    
+    piece.currentTarget.insertBefore(draggable, piece.currentTarget.firstChild); // Déplacer la piece en premier
+
+    const piecePrise = piece.currentTarget.children[1]; // Accéder à la piece mangée
+    piecePrise.removeEventListener('dragstart', dragStart); // Empêcher la piece d'etre draggable
+      
+    const piecesPrisesBlanches = document.getElementById('piecesPrisesBlanches')
+    const piecesPrisesNoirs = document.getElementById('piecesPrisesNoirs')
+
+    piece.currentTarget.removeChild(piecePrise);// Enlever la pièce mangée et la mettre hors jeu
+    if (piecePrise.id === "blanc"){
+        piecesPrisesBlanches.appendChild(piecePrise)
+           
+    } else if (piecePrise.id === "noir") {
+        piecesPrisesNoirs.appendChild(piecePrise)
+    }
+    
+
 }
